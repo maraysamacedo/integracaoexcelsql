@@ -1,20 +1,31 @@
-# Integração Excel SQL
+# Integração de Dados do Banco de Dados SQL para Excel
 ## Visão Geral
-Este projeto tem como objetivo importar dados de arquivos Excel e inserir esses dados em um banco de dados SQL, facilitando a migração e integração de informações de forma simples e automatizada.
+Este projeto tem como objetivo a integração de dados de um banco de dados SQL para o Excel, permitindo a consulta e exportação de dados diretamente para planilhas para facilitar o trabalho com os dados.
 
-## Descrição
-O script neste repositório é projetado para ler dados de arquivos Excel (.xlsx, .xls) e realizar a inserção dessas informações diretamente em um banco de dados SQL. O foco é proporcionar uma maneira eficiente de automatizar a importação de dados de planilhas Excel para tabelas SQL, sem a necessidade de processos manuais.
+## Funcionalidades
+**Consulta SQL:** O projeto fornece uma consulta SQL que pode ser utilizada para extrair dados do banco de dados.
+**Exportação para Excel:** Os dados extraídos são organizados e exportados para uma planilha Excel para análise e manipulação.
+
+## Requisitos
+Banco de dados SQL Server.
+Ferramenta ou ambiente para executar as consultas SQL (ex: MySQL Workbench, DBeaver, SQL Server Management Studio).
+Excel ou outra ferramenta para visualizar os arquivos .xlsx.
 <br><br>
 **[Código](https://github.com/maraysamacedo/integracaoexcelsql/blob/main/1%C2%BA%20PROJETO%20COM%20EXCEL/Query%20com%20integra%C3%A7%C3%A3o%20e%20commit%20com%20Excel.sql)**
 <br><br>
-## Funcionalidades
-Leitura de dados de arquivos Excel (.xlsx, .xls).
-Conexão com bancos de dados SQL Server.
-Inserção de dados nas tabelas do banco de dados SQL.
-Facilita a integração e migração de dados do Excel para o SQL.
+## Como usar
+### Conectar ao Banco de Dados:
+- Abra sua ferramenta de SQL (ex: MySQL Workbench, DBeaver) e conecte-se ao banco de dados onde os dados estão armazenados.
 
-<br><br><br><br>
+### Executar a Consulta SQL:
+- Utilize a consulta SQL fornecida (Query com integração e commit com Excel.sql) para extrair os dados desejados. O arquivo contém a query que pode ser executada diretamente no seu banco de dados.
 
+### Exportar para Excel:
+- Após executar a consulta, os dados podem ser exportados para um arquivo Excel diretamente pela ferramenta de SQL que você está utilizando. A maioria das ferramentas permite exportar o resultado de uma consulta para formatos como .xlsx.
 
+### Abrir o Arquivo Excel:
+
+- O arquivo gerado estará pronto para ser aberto no Excel, permitindo a visualização e manipulação dos dados extraídos.
+<br><br>
 ![Demonstração do Projeto](img/Projeto%20Integração%20EXCEL%20e%20SQ.png
 )
