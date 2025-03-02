@@ -7,7 +7,6 @@ O script neste repositório é projetado para ler dados de arquivos Excel (.xlsx
 <br><br>
 **[Código](https://github.com/maraysamacedo/integracaoexcelsql/blob/main/1%C2%BA%20PROJETO%20COM%20EXCEL/Query%20com%20integra%C3%A7%C3%A3o%20e%20commit%20com%20Excel.sql)**
 <br><br>
-<br><br>
 ## Funcionalidades
 Leitura de dados de arquivos Excel (.xlsx, .xls).
 Conexão com bancos de dados SQL (suporte para MySQL, PostgreSQL e SQLite).
