@@ -10,5 +10,6 @@ Leitura de dados de arquivos Excel (.xlsx, .xls).
 Conexão com bancos de dados SQL (suporte para MySQL, PostgreSQL e SQLite).
 Inserção de dados nas tabelas do banco de dados SQL.
 Facilita a integração e migração de dados do Excel para o SQL.
-<br><br>
-
+<br><br><br><br>
+![Demonstração do Projeto](img/Projeto%20Integração%20EXCEL%20e%20SQ.png
+)
