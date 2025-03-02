@@ -9,7 +9,7 @@ O script neste repositório é projetado para ler dados de arquivos Excel (.xlsx
 <br><br>
 ## Funcionalidades
 Leitura de dados de arquivos Excel (.xlsx, .xls).
-Conexão com bancos de dados SQL (suporte para MySQL, PostgreSQL e SQLite).
+Conexão com bancos de dados SQL Server.
 Inserção de dados nas tabelas do banco de dados SQL.
 Facilita a integração e migração de dados do Excel para o SQL.
 
