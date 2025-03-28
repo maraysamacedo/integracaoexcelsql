@@ -1,21 +1,46 @@
-# Integração de Dados do Banco de Dados SQL para Excel
-## Visão Geral
-Este projeto tem como objetivo a integração de dados de um banco de dados SQL para o Excel, permitindo a consulta e exportação de dados diretamente para planilhas para facilitar o trabalho com os dados.
+# 📈 VIEW `VENDAS_INTERNET` + Exportação para Excel  
+**Visualização e atualização de dados de vendas online** com integração direta para Excel. Ideal para análise de desempenho comercial.  
 
-## Funcionalidades
-**Consulta SQL:** O projeto fornece uma consulta SQL que pode ser utilizada para extrair dados do banco de dados.
-**Exportação para Excel:** Os dados extraídos são organizados e exportados para uma planilha Excel para análise e manipulação.
+---
 
-## Requisitos
-Banco de dados SQL Server.
-Ferramenta ou ambiente para executar as consultas SQL (ex: MySQL Workbench, DBeaver, SQL Server Management Studio).
-Excel ou outra ferramenta para visualizar os arquivos .xlsx.
-<br><br>
-**[Código](https://github.com/maraysamacedo/integracaoexcelsql/blob/main/1%C2%BA%20PROJETO%20COM%20EXCEL/Query%20com%20integra%C3%A7%C3%A3o%20e%20commit%20com%20Excel.sql)**
-<br><br>
+## 🔍 **Visão Geral**  
+View SQL que consolida dados de vendas da tabela `FactInternetSales` com:  
+- **Detalhes de produtos** (categorias, subcategorias)  
+- **Informações de clientes** (nome, gênero, país)  
+- **Métricas financeiras** (custo, receita, quantidade)  
+
+**Destaques**:  
+✅ Filtro automático para o ano **2013**  
+✅ Transação de exemplo para **atualização de estoque** (ProductKey 361)  
+✅ Pronta para exportação 1-clique para Excel  
+
+---
+
+## 📊 **Estrutura da View**  
+### Colunas Exportadas:  
+| Nome no Excel          | Descrição                          | Origem no SQL               |  
+|------------------------|------------------------------------|-----------------------------|  
+| `Nº PEDIDO`            | ID único do pedido                | `FactInternetSales.SalesOrderNumber` |  
+| `DATA DO PEDIDO`       | Data da compra                    | `FactInternetSales.OrderDate` |  
+| `CATEGORIA DO PRODUTO` | Categoria (ex: Bikes, Clothing)   | `DimProductCategory.EnglishProductCategoryName` |  
+| `NOME CLIENTE`         | Nome completo do cliente          | Concatenado: `DimCustomer.FirstName + ' ' + LastName` |  
+| `SEXO`                 | Gênero (M/F)                      | `DimCustomer.Gender` |  
+| `PAÍS`                 | País do cliente                   | `DimSalesTerritory.SalesTerritoryCountry` |  
+| `QTD VENDIDA`          | Unidades vendidas                 | `FactInternetSales.OrderQuantity` |  
+| `CUSTO VENDA`          | Custo total do produto            | `FactInternetSales.TotalProductCost` |  
+| `RECEITA VENDA`        | Valor bruto da venda              | `FactInternetSales.SalesAmount` |  
+
+---
+
+## ⚙️ **Pré-requisitos**  
+- **Banco de Dados**: SQL Server com tabelas do schema **AdventureWorksDW** (ou adapte os JOINs).  
+- **Permissões**: `SELECT` nas tabelas relacionadas + `UPDATE` para a transação de exemplo.  
+
+---
+
 ## Como usar
 ### Conectar ao Banco de Dados:
-- Abra sua ferramenta de SQL (ex: MySQL Workbench, DBeaver) e conecte-se ao banco de dados onde os dados estão armazenados.
+- Abra sua ferramenta de SQL Server e conecte-se ao banco de dados onde os dados estão armazenados.
 
 ### Executar a Consulta SQL:
 - Utilize a consulta SQL fornecida (Query com integração e commit com Excel.sql) para extrair os dados desejados. O arquivo contém a query que pode ser executada diretamente no seu banco de dados.
